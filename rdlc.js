@@ -34,21 +34,5 @@ function QuestionsWithAnswers(page_Index) {
                 });
             }
 
-function CreateTable(response) {
-                var parsedData = JSON.parse(response.d);
-                var tableStr = "<table>" ;
-                tableStr += "<tr><th>QuestionId</th><th>Questions</th><th>Answers</th></tr>" ;
-                $.each(parsedData, function () {
-                    tableStr += "<tr><td>" + this .Id + "</td><td>" + this.Questions + "</td><td>" + this.Answers + "</td></tr>";
-                });
-                tableStr += "</table>";
-                $( '#tableQuestions').html(tableStr);
-                $( "#tableQuestions").dialog(
-                    {
-                        modal: true,
-                        width: 'auto',
-                        height: 'auto'
-                    }
-                );
-            }
+
 
